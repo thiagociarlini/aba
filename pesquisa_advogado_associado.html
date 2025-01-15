@@ -1,43 +1,510 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pesquisar Advogados Associados</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="search-container">
-      <h2>Pesquisar Advogados Associados</h2>
-      <input
-        type="text"
-        placeholder="Digite o nome ou OAB do advogado"
-        class="search-input"
-      />
-      <button class="btn">Buscar</button>
-
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>OAB</th>
-            <th>Email</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Dr. João Silva</td>
-            <td>123456/SP</td>
-            <td>joao.silva@exemplo.com</td>
-            <td>
-              <button class="btn-edit">Editar</button>
-              <button class="btn-delete">Excluir</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Nossos Advogados Associados – Associação Brasileira dos Advogados do Brasil
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <header class="bg-white shadow-md">
+   <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <div class="flex items-center">
+     <img alt="Logo of Associação Brasileira dos Advogados do Brasil" class="h-10 w-auto" src="https://aba.adv.br/wp-content/uploads/2024/11/Logo-Site-ABA.png"/>
+     <h1 class="text-xl font-bold ml-2">
+      Nossos Advogados Associados
+     </h1>
     </div>
-  </body>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      About
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Contact
+     </a>
+     <a class="text-gray-700 hover:text-gray-900" href="#">
+      Profile
+     </a>
+    </nav>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-6">
+   <!-- Public Area -->
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">
+     Busca de Advogados
+    </h2>
+    <form class="bg-white p-4 shadow-md rounded-lg">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+       <label class="block text-gray-700">
+        Área de Atuação
+       </label>
+       <select class="w-full mt-1 p-2 border rounded">
+        <option>
+         Direito Civil
+        </option>
+        <option>
+         Direito Penal
+        </option>
+        <option>
+         Direito Trabalhista
+        </option>
+        <option>
+         Direito Empresarial
+        </option>
+        <option>
+         Direito Ambiental
+        </option>
+        <option>
+         Direito Tributário
+        </option>
+        <option>
+         Direito Internacional
+        </option>
+        <option>
+         Direito Previdenciário
+        </option>
+        <option>
+         Direito de Família
+        </option>
+        <option>
+         Direito Imobiliário
+        </option>
+        <option>
+         Direito Digital
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block text-gray-700">
+        Região
+       </label>
+       <select class="w-full mt-1 p-2 border rounded">
+        <option>
+         São Paulo
+        </option>
+        <option>
+         Rio de Janeiro
+        </option>
+        <option>
+         Minas Gerais
+        </option>
+        <option>
+         Bahia
+        </option>
+        <option>
+         Paraná
+        </option>
+        <option>
+         Rio Grande do Sul
+        </option>
+        <option>
+         Santa Catarina
+        </option>
+        <option>
+         Pernambuco
+        </option>
+        <option>
+         Ceará
+        </option>
+        <option>
+         Distrito Federal
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block text-gray-700">
+        Especialidades
+       </label>
+       <select class="w-full mt-1 p-2 border rounded">
+        <option>
+         Direito de Família
+        </option>
+        <option>
+         Direito Ambiental
+        </option>
+        <option>
+         Direito Tributário
+        </option>
+        <option>
+         Direito Internacional
+        </option>
+        <option>
+         Direito Digital
+        </option>
+        <option>
+         Direito Médico
+        </option>
+        <option>
+         Direito do Consumidor
+        </option>
+        <option>
+         Direito Administrativo
+        </option>
+        <option>
+         Direito Marítimo
+        </option>
+        <option>
+         Direito Eleitoral
+        </option>
+       </select>
+      </div>
+     </div>
+     <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+      Buscar
+     </button>
+    </form>
+   </section>
+   <!-- Public Profile -->
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">
+     Perfil Público
+    </h2>
+    <div class="bg-white p-4 shadow-md rounded-lg">
+     <div class="flex items-center space-x-4">
+      <img alt="Profile picture of a lawyer" class="h-20 w-20 rounded-full" src="https://placehold.co/100x100"/>
+      <div>
+       <h3 class="text-xl font-semibold">
+        Dr. João Silva
+       </h3>
+       <p class="text-gray-600">
+        Advogado Criminalista
+       </p>
+       <p class="text-gray-600">
+        Email: joao.silva@example.com
+       </p>
+       <p class="text-gray-600">
+        Telefone: (11) 1234-5678
+       </p>
+       <p class="text-gray-600">
+        Número de Associação: ABA123456
+       </p>
+      </div>
+     </div>
+     <p class="mt-4 text-gray-700">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+     </p>
+     <h4 class="mt-4 text-lg font-semibold">
+      Serviços Oferecidos:
+     </h4>
+     <ul class="list-disc list-inside text-gray-700">
+      <li>
+       Consultoria Jurídica
+      </li>
+      <li>
+       Representação Legal
+      </li>
+      <li>
+       Defesa Criminal
+      </li>
+     </ul>
+    </div>
+   </section>
+   <!-- Members Area -->
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">
+     Área dos Associados
+    </h2>
+    <div class="bg-white p-4 shadow-md rounded-lg">
+     <h3 class="text-xl font-semibold mb-4">
+      Página de Perfil Completo
+     </h3>
+     <form>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <div>
+        <label class="block text-gray-700">
+         Especialidades
+        </label>
+        <input class="w-full mt-1 p-2 border rounded" type="text"/>
+       </div>
+       <div>
+        <label class="block text-gray-700">
+         Experiências Profissionais
+        </label>
+        <input class="w-full mt-1 p-2 border rounded" type="text"/>
+       </div>
+       <div>
+        <label class="block text-gray-700">
+         Certificações e Qualificações
+        </label>
+        <input class="w-full mt-1 p-2 border rounded" type="text"/>
+       </div>
+       <div>
+        <label class="block text-gray-700">
+         Publicações e Artigos Relevantes
+        </label>
+        <input class="w-full mt-1 p-2 border rounded" type="text"/>
+       </div>
+       <div>
+        <label class="block text-gray-700">
+         Número de Associação
+        </label>
+        <input class="w-full mt-1 p-2 border rounded" type="text"/>
+       </div>
+      </div>
+      <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">
+       Salvar
+      </button>
+     </form>
+    </div>
+   </section>
+   <!-- Feed de Publicações -->
+   <section class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">
+     Feed de Publicações
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+     <!-- Post 1 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer in a courtroom" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dr. João Silva
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogado Criminalista
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-heart text-red-500">
+         </i>
+         <span>
+          120
+         </span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-comment text-gray-500">
+         </i>
+         <span>
+          30
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Post 2 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer giving a presentation" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dra. Maria Oliveira
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogada Trabalhista
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-heart text-red-500">
+         </i>
+         <span>
+          200
+         </span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-comment text-gray-500">
+         </i>
+         <span>
+          45
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Post 3 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer consulting with a client" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dr. Carlos Pereira
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogado Civil
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-heart text-red-500">
+         </i>
+         <span>
+          150
+         </span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-comment text-gray-500">
+         </i>
+         <span>
+          25
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Post 4 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer in a library" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dra. Ana Souza
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogada Empresarial
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-heart text-red-500">
+         </i>
+         <span>
+          180
+         </span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-comment text-gray-500">
+         </i>
+         <span>
+          35
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Post 5 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer working on a laptop" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dr. Pedro Lima
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogado Ambiental
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-heart text-red-500">
+         </i>
+         <span>
+          220
+         </span>
+        </div>
+        <div class="flex items-center space-x-2">
+         <i class="fas fa-comment text-gray-500">
+         </i>
+         <span>
+          50
+         </span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Post 6 -->
+     <div class="bg-white shadow-md rounded-lg overflow-hidden">
+      <div class="relative">
+       <img alt="Image of a lawyer in a meeting" class="w-full h-48 object-cover" src="https://placehold.co/600x400"/>
+       <div class="absolute top-2 right-2 bg-white rounded-full p-1">
+        <i class="fas fa-heart text-red-500">
+        </i>
+       </div>
+      </div>
+      <div class="p-4">
+       <div class="flex items-center space-x-2">
+        <img alt="Profile picture of a lawyer" class="h-10 w-10 rounded-full" src="https://placehold.co/50x50"/>
+        <div>
+         <h2 class="text-lg font-semibold">
+          Dra. Fernanda Costa
+         </h2>
+         <p class="text-gray-600 text-sm">
+          Advogada de Família
+         </p>
+        </div>
+       </div>
+       <p class="mt-2 text-gray-700">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna.
+       </p>
+       <div class="mt-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+         &lt;i class="fas fa-heart text-red-
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+ </body>
 </html>
