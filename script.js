@@ -6,7 +6,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
 
   if (username === 'admin' && password === '1234') {
     alert('Acesso autorizado');
-    window.location.href = 'dashboard.html';
+    window.location.href = 'pesquisa_advogado_associado.html';
   } else {
     alert('Usuário ou senha incorretos');
   }
