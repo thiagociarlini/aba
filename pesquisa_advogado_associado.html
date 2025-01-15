@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesquisar Advogados Associados</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="search-container">
+      <h2>Pesquisar Advogados Associados</h2>
+      <input
+        type="text"
+        placeholder="Digite o nome ou OAB do advogado"
+        class="search-input"
+      />
+      <button class="btn">Buscar</button>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>OAB</th>
+            <th>Email</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Dr. João Silva</td>
+            <td>123456/SP</td>
+            <td>joao.silva@exemplo.com</td>
+            <td>
+              <button class="btn-edit">Editar</button>
+              <button class="btn-delete">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
